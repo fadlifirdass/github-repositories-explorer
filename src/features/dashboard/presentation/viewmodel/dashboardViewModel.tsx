@@ -34,7 +34,7 @@ export default function DashboardViewModel() {
       const response = await axios.get(
         `https://api.github.com/search/users?q=${userSearched} in:login`
       );
-      const fetchedUsers = response.data.items.slice(0, 3);
+      const fetchedUsers = response.data.items.slice(0, 5);
       
       setUsers(fetchedUsers);
 
